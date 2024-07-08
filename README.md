@@ -5,12 +5,12 @@ Build and manipulate [Sourcetrail](https://github.com/CoatiSoftware/Sourcetrail)
 ## Example (from numbat)
 
 ```rust
-use sourcetrail::prelude::*;
+use sourcetrail::SourcetrailDB;
 
 let mut db = SourcetrailDB::create("test").await?;
 
 let my_main = db
-    .record_node(NodeType::NodeClass)
+    .record_class()
     .name("MyMainClass")
     .commit()
     .await?;

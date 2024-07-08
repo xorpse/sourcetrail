@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 use chrono::NaiveDateTime;
 use sqlx::sqlite::{SqliteArguments, SqliteConnectOptions, SqlitePoolOptions, SqliteRow};
 use sqlx::{FromRow, SqlitePool};

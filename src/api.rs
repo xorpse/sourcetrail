@@ -1243,11 +1243,7 @@ mod test {
     async fn test_db() -> Result<(), Box<dyn std::error::Error>> {
         let mut db = SourcetrailDB::create("test").await?;
 
-        let my_main = db
-            .record_node(NodeType::NodeClass)
-            .name("MyMainClass")
-            .commit()
-            .await?;
+        let my_main = db.record_class().name("MyMainClass").commit().await?;
 
         let meth_id = db
             .record_method()

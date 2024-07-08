@@ -1,6 +1,7 @@
 pub mod api;
-pub mod db;
 pub mod types;
+
+pub(crate) mod db;
 
 pub use api::{SourcetrailDB, SourcetrailError};
 
